@@ -33,7 +33,7 @@ const style = StyleSheet.create({
         fontWeight:'600',
         fontSize:25,
         paddingHorizontal:16,
-        color:'#007AFF'
+        color:'#4f6d7a'
 
     },
     containerDisable:{

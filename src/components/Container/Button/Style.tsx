@@ -17,8 +17,8 @@ const style = StyleSheet.create({
     },
     text:{
       color:'white',
-      fontSize:14,
-      fontWeight: 300,
+      fontSize:15,
+      fontWeight: 500,
       paddingVertical:20,
       
     }

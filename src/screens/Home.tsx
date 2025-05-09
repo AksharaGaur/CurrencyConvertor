@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
-import {View,Text, StyleSheet,StatusBar} from 'react-native'
+import {View,Text, StyleSheet,StatusBar, KeyboardAvoidingView} from 'react-native'
 import Container from '../components/Container/Container';
 import Logo from '../components/Container/Logo/Logo';
 import Styles from './style';
 import ClearButton from '../components/Container/Button/ClearButton';
 import InputWithButton from '../components/Container/TextInput/InputWithButton';
 import { LastConvertor } from '../components/Container/Text';
+import Header from '../components/Container/Header/Header'
+
 
 const Temp_Base_Currency = 'USD';
 const Temp_Quote_Currency = 'GBP';
@@ -19,6 +21,8 @@ const Temp_Conversion_Date= new Date()
 
 
 class Home extends Component<{},{}> {
+   
+      
     constructor(props:{}){
       super(props)
     
@@ -39,14 +43,20 @@ class Home extends Component<{},{}> {
     console.log('change text',text)
     }
     
+    handleOptionsPress =()=>{
+       console.log('handle options press')
+    }
     
-// const Home = () =>{
+//  const Home = () =>{
      render(){
     return(
     <View style={Styles.container}>
+        
 
     <Container >
         <StatusBar translucent={false} barStyle={'light-content'} />
+        <Header onPress={this.handleOptionsPress} />
+        
         <View />
         <Logo />
         
@@ -67,9 +77,12 @@ class Home extends Component<{},{}> {
                     quote={Temp_Quote_Currency}
                     date={Temp_Conversion_Date}
                     conversionRate={Temp_Conversion_Rate} />
+        <View style={Styles.reverseButton}>
         <ClearButton 
-        text= 'Reverse Currency' 
+        text= 'Reverse Currencies' 
         onPress={this.handleSwapCurrency}/>
+        </View>
+       
         
     </Container>
     </View>
