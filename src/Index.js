@@ -14,8 +14,8 @@ import CurrencyList from './screens/CurrencyList'
 const Index = () =>{
     return(
         // <View style={Styles.container}>
-        //  <Home />
-        <CurrencyList />
+         <Home />
+        // <CurrencyList />
         //  </View>
         
     )
@@ -24,5 +24,5 @@ const Index = () =>{
 export default Index;
 
 const style = StyleSheet.create({
-    
+
 })
