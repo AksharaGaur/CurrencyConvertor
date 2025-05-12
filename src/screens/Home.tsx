@@ -14,7 +14,7 @@ const Temp_Quote_Currency = 'GBP';
 const Temp_Base_Price = '100'
 const Temp_Quote_Price = '79.74';
 const Temp_Conversion_Rate= 0.7974;
-const Temp_Conversion_Date= new Date()
+const Temp_Conversion_Date= new Date();
 
 
 
@@ -58,8 +58,9 @@ class Home extends Component<{},{}> {
         <Header onPress={this.handleOptionsPress} />
         
         <View />
+       
         <Logo />
-        
+       
         <InputWithButton buttonText={Temp_Base_Currency}
             onPress={this.handlePressBaseCurrency}
             editable = {true} 
@@ -70,7 +71,8 @@ class Home extends Component<{},{}> {
         <InputWithButton buttonText={Temp_Quote_Currency}
                 defaultValue={Temp_Quote_Price}
                 onPress={this.handlePressQuoteCurrency}
-                editable={false} keyboardType={undefined}/>
+                editable={false} keyboardType={undefined}
+                value={Temp_Quote_Price} />
 
         <LastConvertor 
                     base={Temp_Base_Currency}
@@ -82,7 +84,7 @@ class Home extends Component<{},{}> {
         text= 'Reverse Currencies' 
         onPress={this.handleSwapCurrency}/>
         </View>
-       
+        
         
     </Container>
     </View>

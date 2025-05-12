@@ -31,7 +31,7 @@ if (!editable) {
        <Text style={style.buttonText}>{buttonText}</Text>
     </TouchableHighlight>
     <View style={style.border} />
-    <TextInput style={style.input} {...props} />
+    <TextInput style={style.input} underlineColorAndroid='transparent' {...props} />
     </View>
   );
 };

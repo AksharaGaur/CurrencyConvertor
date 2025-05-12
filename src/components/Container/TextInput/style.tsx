@@ -4,7 +4,11 @@ import { StyleSheet } from "react-native";
 const Input_Height = 48;
 const Border_Radius = 4
 
+// const buttonBackgroundColorBase:'white';
+// const buttonBackgoundColorModifier: 0.1
+
 const style = StyleSheet.create({
+  
 
     container:{
         backgroundColor:'white',
@@ -48,7 +52,8 @@ const style = StyleSheet.create({
     },
     border:{
         height:Input_Height,
-        width:StyleSheet.hairlineWidth
+        width:StyleSheet.hairlineWidth,
+        backgroundColor: '#E2E2E2'
 
     }
 
