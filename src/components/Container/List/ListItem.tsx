@@ -12,7 +12,7 @@ type Props = {
     selected?: boolean;
     visible?: boolean;
     iconBackground?: string;
-    customIcon:any // <-- Add this
+    customIcon:any 
   };
   
   const ListItem = ({
@@ -22,7 +22,7 @@ type Props = {
       selected = false,
       visible = true,
       iconBackground, 
-      customIcon = null// NEW: destructure it
+      customIcon = null
     }: Props) => (
       <TouchableHighlight onPress={onPress} underlayColor={styles.$underlayColor}>
         <View style={styles.row}>
@@ -39,7 +39,16 @@ type Props = {
     );
 
 
-
+    ListItem.propTypes = {
+      text: PropTypes.string,
+      onPress: PropTypes.func,
+      checkmark: PropTypes.bool,
+      selected: PropTypes.bool,
+      visible: PropTypes.bool,
+      customIcon: PropTypes.element,
+    };
+    
+    export default ListItem;
 
 
   
@@ -55,16 +64,7 @@ type Props = {
 //   </TouchableHighlight>
 // );
 
-ListItem.propTypes = {
-  text: PropTypes.string,
-  onPress: PropTypes.func,
-  checkmark: PropTypes.bool,
-  selected: PropTypes.bool,
-  visible: PropTypes.bool,
-  customIcon: PropTypes.element,
-};
 
-export default ListItem;
 
 
 // import PropTypes from 'prop-types';

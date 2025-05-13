@@ -1,7 +1,7 @@
 
 import React from 'react';
-import {Text,View,} from 'react-native';
-import Index from './src/Index'
+import {View,} from 'react-native';
+import MainApp from './src/MainApp'
 import Styles from './src/screens/style';
 
 
@@ -9,7 +9,7 @@ import Styles from './src/screens/style';
 const App=()=> {
   return (
     <View style={Styles.container}>
-       <Index />
+      <MainApp />
     </View>
     
   );

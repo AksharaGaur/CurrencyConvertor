@@ -3,6 +3,7 @@
         'AED',
         'AUD',
         'CNY',
+        'CAD',
         'CZK',
         'DKK',
         'EUR',

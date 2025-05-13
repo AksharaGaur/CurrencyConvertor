@@ -7,7 +7,7 @@ import ClearButton from '../components/Container/Button/ClearButton';
 import InputWithButton from '../components/Container/TextInput/InputWithButton';
 import { LastConvertor } from '../components/Container/Text';
 import Header from '../components/Container/Header/Header'
-
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 const Temp_Base_Currency = 'USD';
 const Temp_Quote_Currency = 'GBP';
@@ -17,22 +17,34 @@ const Temp_Conversion_Rate= 0.7974;
 const Temp_Conversion_Date= new Date();
 
 
+type RootStackParamList = {
+    Home: undefined;
+    CurrencyList: undefined;
+    Options: undefined;
+    // add other screens here
+  };
+  
+  type Props = {
+    navigation: NativeStackNavigationProp<RootStackParamList, 'Home'>;
+  };
 
 
 
-class Home extends Component<{},{}> {
+
+//class Home extends Component<{},{}> {
+class Home extends Component<Props> {
    
       
-    constructor(props:{}){
-      super(props)
-    
+    // constructor(props:{}){
+    //   super(props)
+    //}
 
-    }
     handleSwapCurrency =()=>{
         console.log('Press swap currency')
     }
     handlePressBaseCurrency = ()=>{
-        console.log('Press base')
+        //console.log('Press base')
+        this.props.navigation.navigate('CurrencyList')
     }
 
     handlePressQuoteCurrency =()=>{
@@ -44,7 +56,8 @@ class Home extends Component<{},{}> {
     }
     
     handleOptionsPress =()=>{
-       console.log('handle options press')
+      // console.log('handle options press')
+      this.props.navigation.navigate('Options')
     }
     
 //  const Home = () =>{

@@ -13,7 +13,8 @@ export default styles = EStyleSheet.create({
   },
   text: {
     color: '$darkText',
-    fontSize: 16,
+    fontSize: 19,
+  
   },
   separator: {
     backgroundColor: '$border',
